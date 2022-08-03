@@ -1,0 +1,72 @@
+.topBox{
+ border-bottom: 1px solid #e4e4e4;
+
+}
+
+
+.main-logo{
+  height : 70px;
+  width: 70px;
+  background-image: url('./CatudyLogo.jpg');
+  background-size : contain;
+  background-position : center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto; 
+  cursor: pointer;
+}
+
+.middle {
+  width: 400px;
+  height: 750px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.loginF {
+  margin-top: 50px;
+}
+
+.loginF2{
+  margin-top: 25px;
+}
+
+/* 로그인버튼 */
+.loginBtn {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 18px;
+  background-color: #f8de4b;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0;
+  height: 62px;
+
+}
+
+/* 회원가입버튼 */
+.joinBtn{
+  background-color : white ; 
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 200; 
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  height: 62px;
+}
+
+.loginBox1{ 
+  font-size: 14px;
+  color: #6a6a6a;
+  text-align: center;
+  margin-top: 50px;
+}
+
+

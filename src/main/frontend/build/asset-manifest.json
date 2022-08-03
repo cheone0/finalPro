@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10c4dd61.css",
+    "main.js": "/static/js/main.fb49645a.js",
+    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
+    "static/media/CatudyLogo.jpg": "/static/media/CatudyLogo.18f2928f36b53c610efd.jpg",
+    "index.html": "/index.html",
+    "main.10c4dd61.css.map": "/static/css/main.10c4dd61.css.map",
+    "main.fb49645a.js.map": "/static/js/main.fb49645a.js.map",
+    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10c4dd61.css",
+    "static/js/main.fb49645a.js"
+  ]
+}
