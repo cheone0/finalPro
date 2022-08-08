@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import "./App.css";
+import "./Show.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route, Link } from "react-router-dom";
@@ -9,95 +10,74 @@ import Form from "react-bootstrap/Form";
 // import Media from 'react-media';
 
 function App() {
-  const [hello, setHello] = useState("");
-
-  useEffect(() => {
-    axios
-      .get("/api/hello")
-      .then((response) => setHello(response.data))
-      .catch((error) => console.log(error));
-  }, []);
-
   return (
     <Routes>
-      {/*  */}
-      <Route
-        path="/"
-        element={
-          <div>
-            <Navbar bg="light" variant="light">
-              <Container>
-                <Navbar.Brand href="/">Catudy</Navbar.Brand>
-                <Nav className="me-auto">
-                  <Nav.Link href="/login">Login</Nav.Link>
-                  <Nav.Link href="/show">Show</Nav.Link>
-                </Nav>
-              </Container>
-            </Navbar>
+      <Route path="/" element={<div>
+
+        이곳은 메인페이지
+        <Link to = "/show">
+          여기로 가면 캠스터디화면        
+        </Link>
+
+
+
+      </div>} />
+      <Route path="/show" element={
+        <div className="container-fluid">
+      <div className="leftBar">
+          <div className="logo">Catudy</div>
+          <div className="clock" id="clock">00:00</div>
+      </div>
+      <div className="main">
+          <div className="topBar">
+
+              <div className="camName">
+                  <span>자격증 합격 스터디룸</span>
+                  <span className="tool">음소거 마이크 영상키기 전체화면기능</span>
+              </div>
+
           </div>
-        }
-      />
-      <Route
-        path="/login"
-        element={
-          <>
-            {/* 상단 NAVBAR */}
-            <div className="topBox">
-              <Link to="/">
-                <div className="main-logo"></div>
-              </Link>
-            </div>
-            {/* 중단 로그인form*/}
-            <div className="middle">
-              <Form>
-                <h1>로그인</h1>
+          <div className="view">
+              <div className="cam">
+                  <div className="cam1">
+                      <div className="showing">
+                          <div className="camTime">누적시간</div>
+                      </div>
+                      <div className="showing">
+                          <div className="camTime">누적시간</div>
+                      </div>
+                  </div>
+                  <div className="cam2">
+                      <div className="showing">
+                          <div className="camTime">누적시간</div>
+                      </div>
+                      <div className="showing">
+                          <div className="camTime">누적시간</div>
+                      </div>
+                  </div>
+              </div>
+              <div className="chat">
+                  <div className="line"></div>
+                  <div className="chatBox">
+                      <div className="chatTitle">참여자 목록</div>
+                      <div className="memberList"> 멤버리스트</div>
+                      <div className="chatTitle">채팅</div>
+                      <div className="chatScreen">
+                          여기는 채팅화면
+                      </div>
+                      <div className="typing">대화를 입력하세요</div>
 
-                <Form.Group className="mb-3 loginF" controlId="formBasicEmail">
-                  <Form.Label>아이디</Form.Label>
-                  <Form.Control type="email" placeholder="아이디" />
-                </Form.Group>
+                  </div>
 
-                <Form.Group
-                  className="mb-3 loginF2"
-                  controlId="formBasicPassword"
-                >
-                  <Form.Label>비밀번호</Form.Label>
-                  <Form.Control type="password" placeholder="비밀번호" />
-                </Form.Group>
-                {/* 로그인버튼 */}
-                <button className="loginBtn" type="submit">
-                  로그인
-                </button>
+              </div>
+              <div style = {{'clear': 'both'}}></div>
+          </div>
+      </div>
+  </div>
 
-                <div className="loginBox1">아직 회원이 아니신가요?</div>
-                {/* 회원가입버튼 */}
-                <button className="joinBtn" type="submit">
-                  지금 바로 가입하기
-                </button>
-              </Form>
-            </div>
-          </>
-        }
-      />
-      <Route
-        path="/show"
-        element={
-          <>
-            <Navbar bg="light" variant="light">
-              <Container>
-                <Navbar.Brand href="/">Catudy</Navbar.Brand>
-                <Nav className="me-auto">
-                  <Nav.Link href="/login">Login</Nav.Link>
 
-                  <Nav.Link href="/show">Show</Nav.Link>
-                </Nav>
-              </Container>
-            </Navbar>
 
-            <div>Show</div>
-          </>
-        }
-      />
+      } />
     </Routes>
   );
 }

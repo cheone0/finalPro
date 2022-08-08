@@ -15,6 +15,22 @@ public class MainController {
     @GetMapping("/api/hello")
     public String test() {
 		System.out.println("HELLO");
+
+
         return "Hello, HELLO!";
     }
+}
+
+@Entity
+@Table(name = "client")
+public class Client {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private String name;
+    private String email;
+
+    // getter, setters, contructors
 }
